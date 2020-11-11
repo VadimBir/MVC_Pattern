@@ -162,7 +162,7 @@ class Controller():
             self.model.event(str("."))
         elif  event.keysym == "Return":
             self.model.calculate()
-        elif  event.keysym == "c": #not sure if I need to do this input 
+        elif  event.keysym == "c":
             self.model.clear()
         else:
             self.model.event(str(int(event.keysym)))
