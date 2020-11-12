@@ -165,7 +165,9 @@ class Controller():
         elif  event.keysym == "c":
             self.model.clear()
         else:
-            self.model.event(str(int(event.keysym)))
+            if event.keysym.isnumeric():
+                self.model.event(str(event.keysym))
+            #self.model.event(str(int(event.keysym)))
         self.view.refresh(self.model.value)
         print('keystroke: {}'.format(event.keysym))
 
